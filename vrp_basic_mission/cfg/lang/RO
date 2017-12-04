@@ -1,0 +1,63 @@
+local lang = {
+
+  repair = "Repara {1}.",
+
+  reward = "Castigat: {1} $.",
+
+  bankdriver = "Bani primiti {1}.",
+
+  reward = "Castigat: {1} $.",
+
+  delivery = {
+
+    title = "Livrator",
+
+    item = "- {2} {1}"
+
+  },
+
+  drugseller = {
+
+	title = "Vinde droguri",
+
+	item = "- {2} {1}"
+
+	},
+
+  hacker = {
+
+	title = "Vinde informatii de pe cardurile de credit",
+
+	item = "- {2} {1}"
+
+	},
+
+  fisherman = {
+
+	title = "Vinde peste",
+
+	item = "- {2} {1}"
+
+    },
+
+  weapons_smuggler = {
+
+	title = "Ascunde armele!",
+
+	item = "- {2} {1}"
+
+    },
+
+  medical = {
+
+	title = "Livreaza niste Weed medicinal",
+
+	item = "- {2} {1}"
+
+    }
+
+}
+
+
+
+return lang
