@@ -45,14 +45,19 @@ for gtype,weapons in pairs(gunshop_types) do
 				amount = 250
 			end
 			-- payment
-			if user_id ~= nil and vRP.tryPayment(user_id,total) then
-			  vRPclient.giveWeapons(player,{{
-				[weapon] = {ammo=amount}
-			  }})
-
-			  vRPclient.notify(player,{lang.money.paid({total})})
+			         -- payment
+			    local amount = parseInt(amount)
+               if amount <= 1000 then
+            if user_id ~= nil and vRP.tryPayment(user_id,total) then
+				 vRPclient.giveWeapons(player,{{
+                [weapon] = {ammo=amount}
+              }})
+              vRPclient.notify(player,{lang.money.paid({total})})	
+            else
+              vRPclient.notify(player,{lang.money.not_enough()})
+            end		  
 			else
-			  vRPclient.notify(player,{lang.money.not_enough()})
+			vRPclient.notify(player,{'Nice try bro'})
 			end
 		  else
 			vRPclient.notify(player,{lang.common.invalid_value()})
