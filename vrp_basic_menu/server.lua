@@ -417,8 +417,8 @@ local ch_jail = {function(player,choice)
 			if jail_time ~= nil and jail_time ~= "" then 
 	          local target = vRP.getUserSource({tonumber(target_id)})
 			  if target ~= nil then
-		        if tonumber(jail_time) > 30 then
-  			      jail_time = 30
+		        if tonumber(jail_time) > 200 then
+  			      jail_time = 200
 		        end
 		        if tonumber(jail_time) < 1 then
 		          jail_time = 1
